@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Скачать Google Chrome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(120deg, #4285f4, #0f9d58);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      animation: fadeIn 1s ease;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.25);
+      padding: 50px;
+      border-radius: 20px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      animation: popUp 1s ease;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 15px;
+      animation: slideDown 1s ease;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      animation: fadeIn 2s ease;
+    }
+
+    .btn {
+      background: #fbbc05;
+      color: #333;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+      animation: fadeIn 2s ease;
+    }
+
+    .btn:hover {
+      background: #e2a700;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes popUp {
+      0% {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Скачать Google Chrome</h1>
+    <p>Быстрый, безопасный и бесплатный браузер для Windows</p>
+    <a class="btn" href="chrome_windows_installer.exe" download>Скачать Chrome</a>
+  </div>
+</body>
+</html>
