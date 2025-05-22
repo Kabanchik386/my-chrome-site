@@ -1,73 +1,131 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Скачать Google Chrome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #1f1f1f, #2d2d2d);
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(120deg, #4285f4, #0f9d58);
       color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      animation: fadeIn 1s ease;
       text-align: center;
-      animation: fadeIn 1.5s ease;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+
+    .card {
+      background: rgba(0, 0, 0, 0.25);
+      padding: 50px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      animation: popUp 1s ease;
     }
+
     h1 {
-      font-size: 2.5em;
-      margin-top: 50px;
+      font-size: 32px;
+      margin-bottom: 15px;
+      animation: slideDown 1s ease;
     }
+
     p {
-      font-size: 1.2em;
-      margin-bottom: 40px;
-    }
-    .btn {
-      background: #4caf50;
-      color: white;
-      padding: 15px 30px;
-      text-decoration: none;
-      font-size: 1.2em;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      transition: background 0.3s, transform 0.2s;
-    }
-    .btn:hover {
-      background: #45a049;
-      transform: scale(1.05);
-    }
-    .footer {
-      margin-top: 60px;
-      padding: 20px;
-      background: #111;
-      font-size: 1em;
+      font-size: 18px;
+      margin-bottom: 30px;
       animation: fadeIn 2s ease;
     }
+
+    .btn {
+      background: #fbbc05;
+      color: #333;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+      animation: fadeIn 2s ease;
+    }
+
+    .btn:hover {
+      background: #e2a700;
+      transform: scale(1.05);
+    }
+
+    .footer {
+      margin-top: 30px;
+      padding: 20px;
+      font-size: 16px;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      animation: fadeIn 2s ease;
+    }
+
     .footer a {
       color: #00aced;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      margin-top: 8px;
     }
+
     .footer img {
       width: 20px;
       vertical-align: middle;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes popUp {
+      0% {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Скачать Google Chrome</h1>
-  <p>Быстрый, удобный и безопасный браузер для Windows</p>
-  <a class="btn" href="chrome_windows_installer.exe" download>Скачать Chrome</a>
+  <div class="card">
+    <h1>Скачать Google Chrome</h1>
+    <p>Быстрый, безопасный и бесплатный браузер для Windows</p>
+    <a class="btn" href="chrome_windows_installer.exe" download>Скачать Chrome</a>
+  </div>
 
   <div class="footer">
-    ❗ Если не получается скачать, напиши нашему боту в Telegram:<br />
+    ❗ Если не получается скачать, напиши нашему боту в Telegram:<br>
     <a href="https://t.me/downloadGoogle2025_bot" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
       @downloadGoogle2025_bot
     </a>
   </div>
